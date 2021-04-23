@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.Loader;
+
 public class MaterialProp35 extends MaterialProperty {
 
     int anInt9886 = 4096;
@@ -9,7 +11,7 @@ public class MaterialProp35 extends MaterialProperty {
     }
 
     static void lobbyLogin(String string_0, String string_1) {
-        if (false) {
+        if (!Loader.LOBBY_ENABLED) {
             ParticleArchive1Def.worldLogin(string_0, string_1);
             return;
         }
