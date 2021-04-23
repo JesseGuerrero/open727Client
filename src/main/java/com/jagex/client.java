@@ -2308,11 +2308,11 @@ public class client extends Engine {
 
 				if (updateStage == 1) {
 					Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(MaterialProp8.clientSocket, 125000);
-					int length = 13 + aString7164.length();
-					ByteBuf stream = new ByteBuf(length + 4);
+					int length = 9 + aString7164.length();
+					ByteBuf stream = new ByteBuf(length + 2);
 					stream.writeByte(LoginProt.INIT_JS5REMOTE_CONNECTION.id);
 					stream.writeByte(length);
-					stream.writeInt(Loader.CLIENT_BUILD);
+//					stream.writeInt(Loader.CLIENT_BUILD);
 					stream.writeInt(Loader.MAJOR_BUILD);
 					stream.writeInt(Loader.MINOR_BUILD);
 					stream.writeString(aString7164);
