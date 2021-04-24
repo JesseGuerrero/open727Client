@@ -93,7 +93,7 @@ public class Class151 {
             client.GAME_CONNECTION_CONTEXT.reset();
             GameState.setGameState(10);
         } else {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.logout(false);
         }
     }
 

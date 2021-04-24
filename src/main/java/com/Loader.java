@@ -28,6 +28,7 @@ public class Loader extends Applet implements AppletStub {
     public static final boolean LOBBY_ENABLED = false;
     public static final boolean DISABLE_XTEA_CRASH = true;
     public static boolean LOCAL = true;
+    public static boolean QUICK_RESTART = true;
     public static String IP_ADDRESS = LOCAL ? "127.0.0.1" : "axios.trentonkress.com";
     public static Properties clientParams = new Properties();
 

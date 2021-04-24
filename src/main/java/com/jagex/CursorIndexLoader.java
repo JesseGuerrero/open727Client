@@ -15,7 +15,7 @@ public class CursorIndexLoader {
         configIndex.filesCount(SharedConfigsType.CURSORS.id);
     }
 
-    public static void method7333(boolean bool_0) {
+    public static void logout(boolean bool_0) {
         BufferedConnectionContext[] arr_2 = client.aClass184Array7220;
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
             BufferedConnectionContext class184_4 = arr_2[i_3];

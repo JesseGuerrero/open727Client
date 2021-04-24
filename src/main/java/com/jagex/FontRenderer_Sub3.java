@@ -71,7 +71,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
                 string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
             }
             Class151.method2594(string_5, exception_8);
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.logout(false);
             return true;
         }
     }

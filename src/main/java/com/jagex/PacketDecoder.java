@@ -1,6 +1,5 @@
 package com.jagex;
 
-import com.Loader;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.settings.ChangeClanSetting;
 import com.jagex.clans.settings.ClanSettings;
@@ -124,7 +123,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.LOGOUT_FULL) {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.logout(false);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.MAP_PROJANIM_HALFSQ) {
@@ -702,7 +701,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
-            CursorIndexLoader.method7333(Class9.aBool71);
+            CursorIndexLoader.logout(Class9.aBool71);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARC_LARGE) {
@@ -2313,7 +2312,7 @@ public class PacketDecoder {
             return true;
         } else {
             Class151.method2594((context.currentPacket != null ? context.currentPacket.opcode : -1) + "," + (context.secondLastPacket != null ? context.secondLastPacket.opcode : -1) + "," + (context.thirdLastPacket != null ? context.thirdLastPacket.opcode : -1) + " " + context.currentPacketSize, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.logout(false);
             return true;
         }
     }
@@ -2654,7 +2653,7 @@ public class PacketDecoder {
             }
         } else {
             Class151.method2594("" + packet, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.logout(false);
         }
     }
 

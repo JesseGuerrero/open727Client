@@ -4271,7 +4271,7 @@ public class CS2Interpreter {
     }
 
     static void method775() {
-        CursorIndexLoader.method7333(false);
+        CursorIndexLoader.logout(false);
     }
 
     static void method777(CS2Executor executor) {

@@ -16,68 +16,69 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
     }
 
     public static void method14603(int i_0, int interfaceHash, int slotId, String string_3) {
-        IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(interfaceHash, slotId);
-        if (icomponentdefinitions_5 != null) {
-            if (icomponentdefinitions_5.params != null) {
+        IComponentDefinitions interfaceiCompDefs = Index.getIComponentDefinitions(interfaceHash, slotId);
+        if (interfaceiCompDefs != null) {
+            if (interfaceiCompDefs.params != null) {
                 HookRequest hookrequest_6 = new HookRequest();
-                hookrequest_6.source = icomponentdefinitions_5;
+                hookrequest_6.source = interfaceiCompDefs;
                 hookrequest_6.anInt8051 = i_0;
                 hookrequest_6.opName = string_3;
-                hookrequest_6.params = icomponentdefinitions_5.params;
+                hookrequest_6.params = interfaceiCompDefs.params;
                 CS2Executor.executeHookInner(hookrequest_6);
             }
-            if (client.getIComponentSettings(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
+            if ((interfaceHash >> 16) == 1028/*All wardrobe buttons on*/
+                    || client.getIComponentSettings(interfaceiCompDefs).clickOptionEnabled(i_0 - 1)) {
                 BufferedConnectionContext class184_8 = BufferedConnectionContext.getConnectionContext();
                 if (client.GAME_STATE == 0 || client.GAME_STATE == 13) {
                     TCPPacket tcpmessage_7;
                     if (i_0 == 1) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP1, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 2) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP2, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 3) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP3, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 4) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP4, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 5) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP5, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 6) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP6, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 7) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP7, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 8) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP8, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 9) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP9, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 10) {
                         tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_OP10, class184_8.isaac);
-                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, icomponentdefinitions_5.containerItemId);
+                        Class350_Sub3.method12590(tcpmessage_7, interfaceHash, slotId, interfaceiCompDefs.containerItemId);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                 }

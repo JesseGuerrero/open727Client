@@ -2023,10 +2023,10 @@ public class client extends Engine {
 							GAME_CONNECTION_CONTEXT.reset();
 							GameState.setGameState(10);
 						} else {
-							CursorIndexLoader.method7333(Class9.aBool71);
+							CursorIndexLoader.logout(Class9.aBool71);
 						}
 					} else {
-						CursorIndexLoader.method7333(false);
+						CursorIndexLoader.logout(false);
 					}
 				}
 			}
@@ -2038,6 +2038,7 @@ public class client extends Engine {
 	}
 
 	void method11620() {
+		System.out.println(GAME_STATE);
 		if (GAME_STATE != 16) {
 			long long_2 = Class176.method2979() / 1000000L - aLong7170;
 			aLong7170 = Class176.method2979() / 1000000L;
@@ -2115,6 +2116,8 @@ public class client extends Engine {
 			} else if (GAME_STATE == 13) {
 				Class152.method2601(long_2);
 			} else if (GAME_STATE == 10) {
+				if(Loader.QUICK_RESTART)
+					CursorIndexLoader.logout(true);
 				Class446.method7447(LocalizedText.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE) + "<br>" + LocalizedText.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 			} else if (GAME_STATE == 17) {
 				Class446.method7447(LocalizedText.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
@@ -2831,7 +2834,7 @@ public class client extends Engine {
 
 											if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42 || GAME_STATE == 3) {
 												if (GAME_STATE != 7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
-													CursorIndexLoader.method7333(false);
+													CursorIndexLoader.logout(false);
 												} else if (LOBBY_CONNECTION_CONTEXT != null) {
 													++LOBBY_CONNECTION_CONTEXT.anInt2290;
 													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
@@ -2845,7 +2848,7 @@ public class client extends Engine {
 														if (GAME_STATE == 7) {
 															LOBBY_CONNECTION_CONTEXT.method3051();
 														} else {
-															CursorIndexLoader.method7333(false);
+															CursorIndexLoader.logout(false);
 														}
 													}
 												}
