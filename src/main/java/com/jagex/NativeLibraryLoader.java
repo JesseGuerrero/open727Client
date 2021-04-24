@@ -76,6 +76,7 @@ public class NativeLibraryLoader implements LibraryLoader {
             if (libFile != null) {
                 try {
                     libFile = new File(libFile.getCanonicalPath());
+                    System.load(System.getProperty("java.home")+"\\bin\\jawt.dll");
                     System.load(libFile.getPath());
                     linkedLibraries.put(name, link);
                     return true;
