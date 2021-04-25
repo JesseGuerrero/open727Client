@@ -1,6 +1,10 @@
 package com.jagex;
 
+import com.Loader;
+
 import java.io.IOException;
+
+import static com.jagex.Class434.method7292;
 
 public class MaterialProp23 extends MaterialProperty {
 
@@ -49,7 +53,8 @@ public class MaterialProp23 extends MaterialProperty {
                 } else if (Utils.time() >= Class28.aLong351) {
                     PingRequest.CURRENT_REQUEST = client.PING_REQUESTER.createPingRequest(ConnectionInfo.GAME_CONNECTION_INFO.host);
                 }
-                Class434.method7292();
+                if(Loader.ENABLE_USELESS_PACKETS)
+                    method7292();
                 MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head();
                 if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
                     if (NativeLibraryLoader.anInt3240 == 5) {

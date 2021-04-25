@@ -2038,7 +2038,6 @@ public class client extends Engine {
 	}
 
 	void method11620() {
-		System.out.println(GAME_STATE);
 		if (GAME_STATE != 16) {
 			long long_2 = Class176.method2979() / 1000000L - aLong7170;
 			aLong7170 = Class176.method2979() / 1000000L;
