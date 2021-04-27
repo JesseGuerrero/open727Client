@@ -74,6 +74,7 @@ public class CS2Script extends CacheableNode {
 
     void decodeInstruction(ByteBuf rsbytebuffer_1, int i_2, CS2Instruction cs2opinfo_3) {
         int i_4 = operations.length;
+
         if (cs2opinfo_3 == CS2Instruction.PUSH_STRING) {
             if (stringOpValues == null) {
                 stringOpValues = new String[i_4];
@@ -81,9 +82,9 @@ public class CS2Script extends CacheableNode {
 
             String string_5 = rsbytebuffer_1.readString();
             if (string_5.toLowerCase().contains("runescape")) {
-                string_5 = string_5.replace("runescape", "Darkan");
-                string_5 = string_5.replace("RuneScape", "Darkan");
-                string_5 = string_5.replace("Runescape", "Darkan");
+                string_5 = string_5.replace("runescape", "Open 727");
+                string_5 = string_5.replace("RuneScape", "Open 727");
+                string_5 = string_5.replace("Runescape", "Open 727");
             }
 
             stringOpValues[i_2] = string_5.intern();

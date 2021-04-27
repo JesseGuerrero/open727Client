@@ -349,9 +349,9 @@ public class IComponentDefinitions {
             }
             text = rsbytebuffer_1.readString();
             if (text.toLowerCase().contains("runescape")) {
-                text = text.replace("runescape", "Darkan");
-                text = text.replace("RuneScape", "Darkan");
-                text = text.replace("Runescape", "Darkan");
+                text = text.replace("runescape", "Open 727");
+                text = text.replace("RuneScape", "Open 727");
+                text = text.replace("Runescape", "Open 727");
             }
             anInt1358 = rsbytebuffer_1.readUnsignedByte();
             textHorizontalAli = rsbytebuffer_1.readUnsignedByte();
