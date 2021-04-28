@@ -44,10 +44,19 @@ public class SkyboxIndexLoader {
                         IComponentDefinitions component = interface_21.components[i] = new IComponentDefinitions();
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
+
+                        removeMoneyPouch(component, interfaceId, i);
                     }
                 }
             }
             return interface_21;
+        }
+    }
+
+    private static void removeMoneyPouch(IComponentDefinitions component, int interfaceId, int i) {
+        if(interfaceId == 746) {
+            if (i == 208)
+                component.hidden = true;
         }
     }
 
